@@ -11,6 +11,58 @@
     <div class="content">
       <!-- title -->
       <h1 class="title">Numbers</h1>
+
+      <!-- input & buttons -->
+      <div class="digits-form-container">
+        <form id="digits-form">
+          <label class="label" for="component-name"></label>
+          <input
+            type="number"
+            min="0"
+            max="20"
+            class="input"
+            required
+            placeholder="Digit (from 0 to 20)"
+            id="your-digit"
+          />
+          <input type="submit" class="input-btn btn-add" value="Add" />
+        </form>
+        <a href="number.html">
+          <input type="submit" class="input-btn btn-clear" value="Clear" />
+        </a>
+      </div>
+
+      <!-- table -->
+      <div class="table-container">
+        <table id="stats-table" class="table table-center">
+          <thead>
+            <tr>
+              <th width="33%">Number of digits</th>
+              <th width="33%">Sum</th>
+              <th>Average</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <table id="stats-table2" class="table table-center">
+          <thead>
+            <tr>
+              <th width="33%">Equal and greater than 10</th>
+              <th width="33%">Less than 10</th>
+              <th>Digit plus one</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <!-- button to numbers screen -->
+      <div class="container">
+        <a href="string.html" class="string-btn string-btn_btn">
+          <h3>Strings</h3>
+        </a>
+      </div>
     </div>
   </body>
+  <script src="number.js"></script>
 </html>

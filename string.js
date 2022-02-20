@@ -7,10 +7,10 @@ const answer5 = document.querySelector('#answer5');
 const answer6 = document.querySelector('#answer6');
 const answer7 = document.querySelector('#answer7');
 
-const name = document.querySelector('#your-name');
+const string = document.querySelector('#your-string');
 
-name.addEventListener('keyup', () => {
-  const value = name.value;
+string.addEventListener('keyup', () => {
+  const value = string.value;
 
   // insert value
   answer1.textContent = getNumberOfChars(value);
@@ -26,24 +26,25 @@ name.addEventListener('keyup', () => {
   }
 });
 
+// --------------  functions ---------------
 // number of letters
-const getNumberOfChars = (name) => name.length;
+const getNumberOfChars = (string) => string.length;
 
 // first letter
-const getFirstChar = (name) => name.substring(0, 1);
+const getFirstChar = (string) => string.substring(0, 1);
 
 // last letter
-const getLastChar = (name) => name.substring(name.length - 1);
+const getLastChar = (string) => string.substring(string.length - 1);
 
 // all letters in lower case
-const getLower = (name) => name.toLowerCase();
+const getLower = (string) => string.toLowerCase();
 
 // all letters in upper case
-const getUpper = (name) => name.toUpperCase();
+const getUpper = (string) => string.toUpperCase();
 
 // capitalized version of text
-const getCapitalized = (name) =>
-  `${name.substring(0, 1).toUpperCase()}${name.substring(1).toLowerCase()}`;
+const getCapitalized = (string) =>
+  `${string.substring(0, 1).toUpperCase()}${string.substring(1).toLowerCase()}`;
 
 // convert first letter to pink
-const getFirstPink = (name) => name;
+const getFirstPink = (string) => string;

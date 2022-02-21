@@ -30,25 +30,27 @@ const getAverageValue = (digits) => {
 
 // digits >= 10
 const getPassingDigits = (digits) => {
-  const above = digits.filter((digit) => digit >= 10);
-  return above.join(`, `);
+  const above = digits.filter((digit) => digit >= 10).join(`, `);
+  return above;
 };
 
 // digits <= 9
 const getFailingDigits = (digits) => {
-  const bellow = digits.filter((digit) => digit <= 9);
-  return bellow.join(`, `);
+  const bellow = digits.filter((digit) => digit <= 9).join(`, `);
+  return bellow;
 };
 
 // digits raised by 1, but not higher than 20
 const getRaisedDigits = (digits) => {
-  let higher = digits.map((digit) => {
-    if (digit + 1 > 20) {
-      return 20;
-    }
-    return digit + 1;
-  });
-  return higher.join(`, `);
+  let higher = digits
+    .map((digit) => {
+      if (digit + 1 > 20) {
+        return 20;
+      }
+      return digit + 1;
+    })
+    .join(`, `);
+  return higher;
 };
 
 // render rest of table
